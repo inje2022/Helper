@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+body{
+    background-color:beige;
+}
+button{
+    background-color:rgb(0,0,0,0);
+    border:0px;
+}
+
+.l_g{
+    position:relative;
+    background:linear-gradient(#ffffff, #FFDDD2);
+    width:100%;
+    height:25vh;
+}
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-70%);
+    display:flex;
+    width:80%;
+}
+.center>button{
+    flex:1;
+    text-align: center;
+    line-height:50px;
+}
+.center>button>img{
+    vertical-align:middle;
+}
+.flex_con{
+    display:flex;
+    flex:5;
+    flex-direction:column;
+    text-align: center;
+}
+.flex_con>span:first-of-type{
+    font-size:23px;
+    font-weight:bold;
+    margin-bottom:10px;
+    line-height:25px;
+}
+.flex_con>span:last-of-type{
+    font-size:15px;
+    line-height:15px;
+}
+
+.w_box{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    background-color:#fff;
+    width:100%;
+    height:80vh;
+    border-radius:30px 30px 0px 0px;
+    padding:30px;
+}
+.w_box>div{
+    width: 100%;
+}
+.search{
+    position:relative;
+    height:40px;
+    margin-bottom:40px;
+}
+.search_icon{
+    position:absolute;
+    top:11px;
+    left:20px;
+}
+.search_box{
+    width:100%;
+    height:100%;
+    border:0px;
+    padding:11px 11px 11px 55px;
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.15);
+    border-radius:20px;
+}
+.bus_list{
+    position:relative;
+    height:60px;
+    margin-bottom:20px;
+}
+.bus_list>button{
+    position:absolute;
+    border-radius:15px;
+    box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.15);
+    height: 60px;
+}
+.text{
+    top:0px;
+    left:0px;
+    background-color:#fff;
+    width:76%;
+    padding:12px 20px;
+    text-align:left;
+}
+.text>p:first-of-type{
+    line-height:20px;
+    font-weight:bold;
+    font-size:17px;
+}
+.text>p:last-of-type{
+    line-height:16px;
+    font-size:12px;
+}
+.icon{
+    top:0px;
+    right:0px;
+    background-color:#E29578;
+    width:20%;
+    text-align:center;
+}
+.icon>img{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+}
+
+
+
+
