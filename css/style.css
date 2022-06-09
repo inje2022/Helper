@@ -84,7 +84,6 @@ button{
 .menu-popup a{
     display:block;
     padding:14px 30px;
-    /*background-color:#ccccff;*/
 }
 
 .search{
@@ -213,6 +212,49 @@ button{
     margin-left:10px;
     background-color:#FFDDD2;
 }
+
+.check{
+    cursor:pointer;
+    position:absolute;
+    bottom:43%;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    z-index:90;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:22px;
+    border-radius:20px;
+    background-color:#fff;
+    box-shadow:0px 2px 4px 2px rgba(0,0,0,0.1);
+}
+.check>img{
+    flex:1;
+    max-width:110px;
+    margin-right:4vw;
+}
+.check>div{
+    flex:2;
+}
+.check>div>p{
+    margin:0;
+    text-align:center;
+}
+.bold{
+    font-weight:bold;
+    font-size:17px;
+}
+.inher{
+    font-weight:inherit;
+    font-size:14px;
+}
+.check strong{
+    font-size:21px;
+}
+
+
+
 
 
 

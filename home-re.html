@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home-re</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=393a1b1084899c595beed7684610e268"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="top">
+        <img src="img/phone-top.png" class="phone">
+        <button class="menu">
+            <img src="img/menu.png">
+        </button>
+        <aside class="menu-popup pop-none">
+            <ul>
+                <li>
+                    <a>공지사항</a>
+                </li>
+                <li>
+                    <a>1 &#58; 1 문의</a>
+                </li>
+                <li>
+                    <a>설정</a>
+                </li>
+            </ul>
+        </aside>
+        <div class="search">
+            <img src="img/Search.png" class="search_icon">
+            <input type="text" placeholder="정류장 검색" class="search_box">
+        </div>
+    </header>
+    <div id="map"></div>
+    <div class="check" onclick="location.href='Reservation.html'">
+        <img src="img/bus_color_stroke.png">
+        <div>
+            <p class="bold">저상버스 2번 예약</p>
+            <p class="inher">인제대하교 정류장 도착까지</p>
+            <p class="inher"><strong>4</strong>분 <strong>38</strong>초 남았습니다</p>
+            <p class="inher">4번째 전 정류장 출발</p>
+        </div>
+    </div>
+    <div id="buslist">
+        <button class="bl b1"><!--onclick="location.href='station.html'"-->
+            <span class="blt">인제공원</span>
+            <span class="blmt">263m &nbsp;&#124;&nbsp; 1522 &nbsp;&#124;&nbsp; 인제대학교 방면</span>
+        </button>
+        <button class="bl b2">
+            <span class="blt">인제대학교</span>
+            <span class="blmt">265m	&nbsp;&#124;&nbsp; 1166 &nbsp;&#124;&nbsp; 대우유토피아 방면</span>
+        </button>
+        <button class="bl b3">
+            <span class="blt">인제공원</span>
+            <span class="blmt">277m	&nbsp;&#124;&nbsp; 1377 &nbsp;&#124;&nbsp; 삼방동장애인복지관 방면</span>
+        </button>
+        <button class="bl bl_f b4">
+            <span class="blt">삼방동장애인복지관</span>
+            <span class="blmt">381m	&nbsp;&#124;&nbsp; 1165 &nbsp;&#124;&nbsp; 인제공원 방면</span>
+        </button>
+    </div>
+    <div class="md_can1 can1_n">
+        <div>
+            <p class="can1_title">교통약자 저상버스<br>예약시스템</p>
+            <p class="can1_subtitle">저상버스란?</p>
+            <p class="can1_text">바닥이 낮고 출입구에 계단이 없는 버스</p>
+            <p class="can1_subtitle">예약시스템 이용안내</p>
+            <p class="can1_text">교통약자의 편리한 버스 이용을 위하여 저상버를 예약할 수 있는 시스템입니다.<br>정류장 100m 이내에 위치해 있어야 예약이 가능합니다. 예약 버튼을 클릭하면 해당 버스의 운전자 단말기에 메시지가 전달되는 시스템입니다.</p>
+            <div class="can1_flex">
+                <button class="can1">다시 보지 않기</button>
+                <button class="can1_close">닫기</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = { 
+        center: new kakao.maps.LatLng(35.246665387146504, 128.9041541985519), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    
+    var markerPosition  = new kakao.maps.LatLng(35.24668093233511, 128.90373441828316); 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+    // marker.setMap(null); 
+    </script>
+    
+    <script>
+        jQuery(document).ready(function($){
+            $(".menu").click(function(){
+                $(".menu-popup").toggleClass('pop-none');
+            })
+            $(".can1_close").click(function(){
+                $(".md_can1").fadeOut(450);
+            })
+            $(".can1").click(function(){
+                $(".md_can1").fadeOut(450);
+            })
+            $(".b1").click(function(){
+                $(".b1").addClass("bl_click");
+                $(".b2").removeClass("bl_click");
+                $(".b3").removeClass("bl_click");
+                $(".b4").removeClass("bl_click");
+            })
+            $(".b2").click(function(){
+                $(".b1").removeClass("bl_click");
+                $(".b2").addClass("bl_click");
+                $(".b3").removeClass("bl_click");
+                $(".b4").removeClass("bl_click");
+            })
+            $(".b3").click(function(){
+                $(".b1").removeClass("bl_click");
+                $(".b2").removeClass("bl_click");
+                $(".b3").addClass("bl_click");
+                $(".b4").removeClass("bl_click");
+            })
+            $(".b4").click(function(){
+                $(".b1").removeClass("bl_click");
+                $(".b2").removeClass("bl_click");
+                $(".b3").removeClass("bl_click");
+                $(".b4").addClass("bl_click");
+            })
+            $(".bl_click").click(function(){
+                $(location).attr("href", "station.html");
+            })
+        })
+    </script>
+
+    <!--<script>
+        jQuery(document).ready(function($){
+            $(".toggleHeader").click(function(){
+                $("#header").toggleClass('active');
+            });
+
+             $(".toggleHeader").click(function(){
+             	if($("header").hasClass('active')){
+             		$("#header").removeClass('active');
+             	}else{
+             		$("#header").addClass('active');
+             	}
+             });
+        });
+    </script>-->
+</body>
+</html>
