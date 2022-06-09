@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>busdetail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=393a1b1084899c595beed7684610e268"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bus-detail.css">
+</head>
+<body>
+    <div class="l_g">
+        <div class="center">
+            <button onclick="history.back();">
+                <img src="img/back.png">
+            </button>
+            <div class="flex_con">
+                <span>2</span>
+                <span>13분후 도착</span>
+                <button onclick="location.href='information.html'">정보보기</button>
+            </div>
+            <button onclick="location.href='index.html'">
+                <img src="img/Home.png">
+            </button>
+        </div>
+    </div>
+    <div class="w_box">
+        <div class="search">
+            <img src="img/Search.png" class="search_icon">
+            <input type="text" placeholder="정류장 검색" class="search_box">
+        </div>
+        <div class="w_box_flex">
+            <div class="bus_icon_box">
+                <img src="img/down_bar.png">
+                <img src="img/bus_color.png" class="icon_box">
+            </div>
+            <div class="list">
+                <div class="station_list">
+                    <p>영운초등학교</p>
+                    <p>5분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>삼방동장애인복지관</p>
+                    <p>8분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제공원</p>
+                    <p>10분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <div class="station_list">
+                    <p>인제대학교</p>
+                    <p>13분후 도착</p>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

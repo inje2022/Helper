@@ -5,9 +5,6 @@
     padding: 0px;
     box-sizing:border-box;
 }
-body{
-    background-color:beige;
-}
 button{
     background-color:rgb(0,0,0,0);
     border:0px;
@@ -25,6 +22,7 @@ button{
     left:50%;
     transform:translateX(-50%) translateY(-70%);
     display:flex;
+    text-align: center;
     width:80%;
 }
 .center>button{
@@ -39,7 +37,14 @@ button{
     display:flex;
     flex:5;
     flex-direction:column;
-    text-align: center;
+    align-items: center;
+}
+.flex_con>button{
+    margin-top: 10px;
+    width:80px;
+    height:30px;
+    border-radius:7px;
+    background-color:#fff;
 }
 .flex_con>span:first-of-type{
     font-size:23px;
@@ -58,12 +63,9 @@ button{
     left:0px;
     background-color:#fff;
     width:100%;
-    height:80vh;
+    height:80%;
     border-radius:30px 30px 0px 0px;
-    padding:30px;
-}
-.w_box>div{
-    width: 100%;
+    padding:30px 30px 0px;
 }
 .search{
     position:relative;
@@ -83,43 +85,52 @@ button{
     box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.15);
     border-radius:20px;
 }
-.bus_list{
+.w_box_flex{
     display:flex;
     justify-content:space-between;
-    height:60px;
-    margin-bottom:20px;
+    height: 85%;
+    overflow-y: scroll;
+    padding:10px;
+    padding-bottom:15px;
 }
-.bus_list>button{
+.w_box_flex::-webkit-scrollbar{
+    display:none;
+}
+.bus_icon_box{
+    flex:none;
+    position:relative;
+    padding:23px 0px 50px;
+    margin-right:30px;
+    /*position:absolute;
+    top:0px;
+    left:30px;
+    width:15%;
+    height:330px;*/
+}
+.icon_box{
+    position:absolute;
+    top:60px;
+    left:50%;
+    transform:translateX(-30%) translateY(-50%);
+}
+.list{
+    width:100%;
+}
+.station_list{
+    height:60px;
+    margin-bottom:15px;
     border-radius:15px;
     box-shadow: 1px 2px 4px 1px rgba(0,0,0,0.15);
-    height: 60px;
-}
-.text{
     background-color:#fff;
-    width:100%;
     padding:12px 20px;
-    text-align:left;
-    margin-right:20px;
 }
-.text>p:first-of-type{
+.station_list>p:first-of-type{
     line-height:20px;
     font-weight:bold;
-    font-size:17px;
+    font-size:16px;
+    margin-bottom:2px;
 }
-.text>p:last-of-type{
+.station_list>p:last-of-type{
     line-height:16px;
     font-size:12px;
 }
-.icon{
-    flex:none;
-    width:60px;
-    height:60px;
-    background-color:#E29578;
-    text-align:center;
-}
-p{
-    margin-bottom:0px;
-}
-
-
-

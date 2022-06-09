@@ -5,9 +5,6 @@
     padding: 0px;
     box-sizing:border-box;
 }
-body{
-    background-color:beige;
-}
 button{
     background-color:rgb(0,0,0,0);
     border:0px;
@@ -68,14 +65,20 @@ button{
     width:100%;
     height:80vh;
     border-radius:30px 30px 0px 0px;
-    padding:30px;
+    padding:0 30px 30px;
+}
+.w_box_flex{
+    display:flex;
+    justify-content:space-between;
 }
 .bus_icon_box{
-    position:absolute;
+    flex:none;
+    padding:0 50px;
+    /*position:absolute;
     top:0px;
     left:30px;
     width:15%;
-    height:330px;
+    height:330px;*/
 }
 .stroke{
     position:relative;
@@ -112,10 +115,12 @@ button{
     width:22px;
 }
 .list{
-    position:absolute;
+    width:100%;
+    padding-top:30px;
+    /*position:absolute;
     width:65%;
     top:30px;
-    right:30px;
+    right:30px;*/
 }
 .station_list{
     height:60px;
@@ -137,29 +142,31 @@ button{
 }
 .cancel{
     display:flex;
+    justify-content:center;
+    align-items:center;
     position:absolute;
     bottom:30px;
     left:50%;
     transform:translateX(-50%);
-    width:70%;
+    min-width:265px;
     height:85px;
     border-radius:20px;
     background-color:#E29578;
     padding:15px 23px;
 }
 .cancel>img{
-    flex:1;
+    flex:none;
     margin-right:15px;
     justify-content:center;
 }
 .cancel>span{
     flex:5;
-    line-height:55px;
     color:#fff;
     font-weight:bold;
+    font-size:14px;
 }
 
-.md{
+.md, .md_can1, .md_can2{
     position:fixed;
     top:0px;
     left:0px;
@@ -167,22 +174,21 @@ button{
     height:100%;
     background-color:rgba(0,0,0,0.6);
 }
-.md>div{
+.md>div, .md_can1>div, .md_can2>div{
     position:absolute;
     top:50%;
     left:50%;
     transform:translateX(-50%) translateY(-50%);
     width:290px;
-    height:90px;
     border-radius:20px;
     background-color:#fff;
     text-align:center;
     padding-top:40px;
-    padding-bottom:20px;
+    padding-bottom:25px;
     font-weight:bold;
     font-size:16px;
 }
-.md>div>div{
+.md>div>div, .md_can1>div>div:first-child, .md_can2>div>div{
     position:absolute;
     top:0px;
     left:50%;
@@ -192,18 +198,41 @@ button{
     border-radius:20px;
     background-color:#E29578;
 }
-.md>div>div>img{
+.md>div>div>img, .md_can1>div>div>img, .md_can2>div>div>img{
     position:absolute;
     top:50%;
     left:50%;
     transform:translateX(-50%) translateY(-50%);
 }
-
-
-
-
-
-
+.md_can1>div{
+    padding-bottom:0px;
+}
+.can1_flex{
+    position:relative;
+    display:flex;
+    padding:25px;
+    padding-top:0px;
+}
+.can1{
+    flex:2;
+    background-color:#E29578;
+    color:#fff;
+    border-radius:13px;
+    height:40px;
+}
+.can1_close{
+    flex:1;
+    height:40px;
+    border-radius:13px;
+    margin-left:10px;
+    background-color:#FFDDD2;
+}
+.can1_n{
+    display:none;
+}
+.can2_n{
+    display:none;
+}
 
 
 
